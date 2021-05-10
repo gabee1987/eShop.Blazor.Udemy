@@ -16,8 +16,8 @@
             Price: <label style="color:darkred">@product.Price.ToString("c")</label>
         </p>
         <p class="card-text">@product.Description</p>
+        <button class="btn btn-primary" @onclick="AddToCart">Add To Cart</button>
     </div>
-    <button class="btn btn-primary" @onclick="AddToCart">Add To Cart</button>
 </div>
 <br/>
 <NavLink href="products">Back to Products</NavLink>
@@ -40,7 +40,7 @@
     private void AddToCart()
     {
         addProductToCartUseCase.Execute( product.ProductId );
-        navigationmanager.NavigateTo( "/" );
+        navigationmanager.NavigateTo( "/products" );
     }
 
 }
