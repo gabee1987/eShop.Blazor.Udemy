@@ -193,7 +193,14 @@ app {
 }
 
 .navbar .nav-cart-link {
+    margin-right: 1rem;
+}
 
+.nav-cart-link  span{
+    color: #fff;
+    margin-left: -9px;
+    text-decoration: none;
+    outline: none;
 }
 
 .navbar i {
