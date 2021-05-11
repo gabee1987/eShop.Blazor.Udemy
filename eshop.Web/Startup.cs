@@ -4,7 +4,9 @@ using eShop.ShoppingCart.LocalStorage;
 using eShop.UseCases.PluginInterfaces.DataStore;
 using eShop.UseCases.PluginInterfaces.UI;
 using eShop.UseCases.SearchProductScreen;
+using eShop.UseCases.ShoppingCartScreen.eShop.UseCases.ViewShoppingCartUseCase;
 using eShop.UseCases.ViewProductScreen;
+using eShop.UseCases.ViewShoppingCartUseCase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -43,6 +45,7 @@ namespace eshop.Web
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
             services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
+            services.AddTransient<IViewShoppingCartUseCase, ViewShoppingCartUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

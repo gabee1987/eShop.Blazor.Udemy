@@ -188,8 +188,18 @@ app {
                 N A V B A R
   ==========================================
 */
-#nav-search-form button {
-    margin-left: 5px;
+.searchNav button {
+    margin-left: 0.5rem;
+}
+
+.navbar .nav-cart-link {
+
+}
+
+.navbar i {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-right: 1rem
 }
 
 /*==========================================
