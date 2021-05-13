@@ -3,7 +3,7 @@
 
 @inject ISearchProductUseCase searchProductUseCase
 
-<h3>Search Products</h3>
+<h3>Products</h3>
 <br/>
 
 <SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
@@ -14,10 +14,12 @@
 
 @if( products != null && products.Count() > 0 )
 {
-<div class="row">
+<div class="row card-row">
     @foreach ( var product in products )
     {
-        <ProductCardComponent Product="product"></ProductCardComponent>
+        <div class="col-sm-4 card-col">
+            <ProductCardComponent Product="product"></ProductCardComponent>
+        </div>
     }
 </div>
     

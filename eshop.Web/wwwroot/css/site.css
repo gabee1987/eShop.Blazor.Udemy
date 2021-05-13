@@ -215,4 +215,14 @@ app {
 */
 .card {
     margin: 1rem;
+    transition: ease-out 300ms;
+}
+
+.card:hover .card {
+    background-color: 
+}
+
+.card-col {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
