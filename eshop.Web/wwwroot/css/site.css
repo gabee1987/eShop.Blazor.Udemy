@@ -1,20 +1,37 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 html, body {
     font-family: 'Roboto', sans-serif;
     background-color: #F0F0F0;
 }
 
+/*===========================================================
+                  B U T T O N S   &   L I N K S
+  ===========================================================
+*/
 a, .btn-link {
-    color: #0366d6;
+    color: #19D7B1;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: #19D7B1;
+    border: none;
 }
+
+.btn:hover {
+    background-color: #17b595;
+    border: none;
+}
+
+a:hover {
+    color: #17b595;
+}
+
+
+
 
 app {
     position: relative;
@@ -248,6 +265,17 @@ app {
     /*border-top: 1px dashed #b2b2b2;*/
 }
 
+.footer li {
+    border: none;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.footer-title {
+    text-align: left;
+    text-transform: uppercase;
+}
+
 .footer-middle {
     padding: 0 20px 20px;
     overflow: hidden;
@@ -262,7 +290,7 @@ app {
     .social-sharing:before {
         content: '';
         height: 1px;
-        top: 23px;
+        top: 33px;
         position: absolute;
         left: 0;
         right: 0;
@@ -276,6 +304,7 @@ app {
         position: relative;
         margin: 0 6px 12px;
         z-index: 2;
+        text-align: center;
     }
 
     .social-sharing a {
@@ -289,8 +318,17 @@ app {
         transition: all .2s ease-in-out;
     }
 
+        .social-sharing a:hover {
+            background: #f3f3f3;
+        }
+
+            .social-sharing a:hover i {
+                color: #19D7B1;
+            }
+
         .social-sharing i:before {
             line-height: 47px;
+            font-size: 1.5rem;
         }
 
     .social-sharing i {
@@ -299,6 +337,16 @@ app {
 
     .social-sharing .twitter:before {
     }
+
+.newsletter-email {
+    display: flex;
+}
+
+.newsletter-subscribe-button {
+    width: 47px;
+    background-color: #19D7B1;
+    border: none;
+}
 
 
 .footer-lower {
