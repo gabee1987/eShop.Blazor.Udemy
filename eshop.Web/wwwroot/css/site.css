@@ -256,7 +256,8 @@ app {
 .navbar i {
     font-size: 1.6rem;
     color: #fff;
-    margin-right: 1rem
+    margin-right: 1rem;
+    line-height: 38px;
 }
 
 /*===========================================================
@@ -264,14 +265,33 @@ app {
   ===========================================================
 */
 .card {
-    transition: ease-out 300ms;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
     box-shadow: 0 0 14px rgb(0 0 0 / 6%);
     border-radius: 0;
     border: none;
 }
 
+    .card a {
+        z-index: 1;
+    }
+
+    .card .card-body {
+        z-index: 1;
+    }
+
+    .card .card-footer {
+        z-index: 1;
+    }
+
 .card:hover .card {
-    background-color: 
+    
+}
+
+.card-text {
+    color: #19D7B1;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .card-col {
@@ -283,12 +303,26 @@ app {
     background-color: #fff;
 }
 
+.card:hover .card-zoom-bg {
+    transform: scale(1.05);
+}
+
+.card-zoom-bg {
+    background-color: #fff;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 14px rgb(0 0 0 / 6%);
+}
+
 
 /*===========================================================
                         S E R C H P R O D U C T S
   ===========================================================
 */
-
 .search-bar {
     background-color: #fff;
 }
