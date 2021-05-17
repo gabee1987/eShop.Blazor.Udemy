@@ -19,6 +19,7 @@ a, .btn-link {
     color: #fff;
     background-color: #19D7B1;
     border: none;
+    border-radius: 0;
 }
 
 .btn:hover {
@@ -30,6 +31,37 @@ a:hover {
     color: #17b595;
 }
 
+btn:focus, a:focus {
+    outline: none !important;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/*===========================================================
+                  I N P U T S   &   F O R M S
+  ===========================================================
+*/
+input {
+    border-radius: 0 !important;
+    background-color: #F2F2F2 !important;
+    border: none !important;
+}
+
+
+
+/*===========================================================
+                            A P P
+  ===========================================================
+*/
 
 
 
@@ -232,7 +264,6 @@ app {
   ===========================================================
 */
 .card {
-    margin: 1rem;
     transition: ease-out 300ms;
     box-shadow: 0 0 14px rgb(0 0 0 / 6%);
     border-radius: 0;
@@ -251,6 +282,71 @@ app {
 .card-footer {
     background-color: #fff;
 }
+
+
+/*===========================================================
+                        S E R C H P R O D U C T S
+  ===========================================================
+*/
+
+.search-bar {
+    background-color: #fff;
+}
+
+.searchbar-border-left {
+    height: 2px;
+    width: 75px;
+    background-color: #19D7B1;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 15px;
+}
+
+.products-sidebar {
+    /*background-color: #fff;*/
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.search-section {
+    /*margin-top: 0.5rem;*/
+    margin-bottom: 0.5rem;
+    /*padding: 0.5rem 0.2rem;*/
+}
+
+.search-section .form-inline {
+    /*margin: 0.5rem 0.3rem;*/
+    width: 100%;
+    text-align: center;
+}
+
+.searchbar-title {
+    border-bottom: 1px dashed #d4d4d4;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+
+    .searchbar-title label {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+    }
+
+
+.white-input {
+    background-color: #fff !important;
+}
+
+.searchbar-button {
+    display: none;
+    width: 100%;
+    height: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
 
 /*===========================================================
                         F O O T E R
@@ -274,6 +370,12 @@ app {
 .footer-title {
     text-align: left;
     text-transform: uppercase;
+}
+
+.footer-block a {
+    text-decoration: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .footer-middle {
@@ -314,8 +416,8 @@ app {
         border: 1px dashed #b2b2b2;
         background: #fff;
         position: relative;
-        -webkit-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
         .social-sharing a:hover {
@@ -333,6 +435,8 @@ app {
 
     .social-sharing i {
         color: #b2b2b2;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     .social-sharing .twitter:before {
@@ -342,10 +446,16 @@ app {
     display: flex;
 }
 
+.newsletter-email i {
+    color: #fff;
+}
+
 .newsletter-subscribe-button {
     width: 47px;
     background-color: #19D7B1;
     border: none;
+    margin-left: 3px;
+    border-radius: 0;
 }
 
 
@@ -354,4 +464,8 @@ app {
     text-transform: none;
     font-family: 'Lato',sans-serif;
     line-height: 25px;
+}
+
+.footer-lower a {
+    text-decoration: none;
 }

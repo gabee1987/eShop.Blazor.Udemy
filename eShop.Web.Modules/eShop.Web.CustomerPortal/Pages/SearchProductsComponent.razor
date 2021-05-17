@@ -6,28 +6,65 @@
 <h3>Products</h3>
 <br/>
 
-<SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="products-sidebar">
+                <div class="search-section">
+                    <div class="searchbar-title">
+                        <label>Search</label>
+                        @*<div class="searchbar-border-left"></div>*@
+                    </div>
+                    <SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+                </div>
+                <div class="price-range-section">
+                    <div class="searchbar-title">
+                        <label>Price Range</label>
+                    </div>
+
+                </div>
+                <div class="categories-section">
+                    <div class="searchbar-title">
+                        <label>Categories</label>
+                    </div>
+
+                </div>
+                <div class="brands-section">
+                    <div class="searchbar-title">
+                        <label>Brands</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="products-grid">
+                @if ( products != null && products.Count() > 0 )
+                {
+                    <div class="row card-row">
+                        @foreach ( var product in products )
+                        {
+                            <div class="col-sm-4 card-col">
+                                <ProductCardComponent Product="product"></ProductCardComponent>
+                            </div>
+                        }
+                    </div>
+
+                }
+                else
+                {
+                    <p>No products found.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
 
 <br/>
 
 
 
-@if( products != null && products.Count() > 0 )
-{
-<div class="row card-row">
-    @foreach ( var product in products )
-    {
-        <div class="col-sm-4 card-col">
-            <ProductCardComponent Product="product"></ProductCardComponent>
-        </div>
-    }
-</div>
-    
-}
-else
-{
-    <p>No products found.</p>
-}
+
 
 
 

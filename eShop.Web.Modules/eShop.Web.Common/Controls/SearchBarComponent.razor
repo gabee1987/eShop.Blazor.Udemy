@@ -1,9 +1,10 @@
 ﻿<form class="form-inline">    
-    <div class="form-group mx-sm-3 mb-2">
-        <label for="filter">Search:&nbsp;</label>
-        <input type="text" class="form-control" id="filter" @bind-value="filter" />        
+    <div class="form-group">
+        <input type="text" class="form-control white-input" id="filter" @bind-value="filter" placeholder="Search..." />        
+        <button type="button" class="btn btn-primary" @onclick="HandleSearch">
+            <i class="fas fa-search"></i>
+        </button>
     </div>
-    <button type="button" class="btn btn-primary mb-2" @onclick="HandleSearch">Search</button>
 </form>
 
 @code {
