@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eShop.CoreBusiness\eShop.CoreBusiness.csproj" />
     <ProjectReference Include="..\eShop.UseCases\eShop.UseCases.csproj" />
+    <ProjectReference Include="..\eShop.Web.Modules\eShop.Web.AdminPortal\eShop.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\eShop.Web.Modules\eShop.Web.Common\eShop.Web.Common.csproj" />
     <ProjectReference Include="..\eShop.Web.Modules\eShop.Web.CustomerPortal\eShop.Web.CustomerPortal.csproj" />
     <ProjectReference Include="..\Plugins\eShop.DataStore.HardCoded\eShop.DataStore.HardCoded.csproj" />

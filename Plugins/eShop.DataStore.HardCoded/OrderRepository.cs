@@ -7,7 +7,7 @@ using System.Text;
 
 namespace eShop.DataStore.HardCoded
 {
-    class OrderRepository : IOrderRepository
+    public class OrderRepository : IOrderRepository
     {
         private Dictionary<int, Order> m_orders;
         public OrderRepository()

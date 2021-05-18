@@ -1,4 +1,5 @@
 using eshop.Web.Data;
+using eShop.CoreBusiness.Services;
 using eShop.DataStore.HardCoded;
 using eShop.ShoppingCart.LocalStorage;
 using eShop.StateStore.DI;
@@ -42,6 +43,7 @@ namespace eshop.Web
             services.AddSingleton<WeatherForecastService>();
 
             services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<IOrderRepository, OrderRepository>();
 
             services.AddScoped<IShoppingCart, ShoppingCart>();
             services.AddScoped<IShoppingCartStateStore, ShoppingCartStateStore>();
@@ -53,6 +55,7 @@ namespace eshop.Web
             services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
             services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
             services.AddTransient<IPlaceOrderUseCase, PlaceOrderUseCase>();
+            services.AddTransient<IOrderService, OrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
