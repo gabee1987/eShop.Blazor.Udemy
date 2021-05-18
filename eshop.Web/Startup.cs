@@ -6,6 +6,7 @@ using eShop.UseCases.PluginInterfaces.DataStore;
 using eShop.UseCases.PluginInterfaces.StateStore;
 using eShop.UseCases.PluginInterfaces.UI;
 using eShop.UseCases.SearchProductScreen;
+using eShop.UseCases.ShoppingCartScreen;
 using eShop.UseCases.ShoppingCartScreen.eShop.UseCases.ViewShoppingCartUseCase;
 using eShop.UseCases.ViewProductScreen;
 using eShop.UseCases.ViewShoppingCartUseCase;
@@ -49,6 +50,8 @@ namespace eshop.Web
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
             services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
             services.AddTransient<IViewShoppingCartUseCase, ViewShoppingCartUseCase>();
+            services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
+            services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
