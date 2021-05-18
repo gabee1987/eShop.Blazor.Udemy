@@ -2,32 +2,35 @@
 
 @inject IViewShoppingCartUseCase viewShoppingCartUseCase
 
-<h3>Shopping Cart</h3>
-<br />
+<div class="container">
+    <h3>Shopping Cart</h3>
+    <br />
 
-@if ( m_order != null && m_order.LineItems != null && m_order.LineItems.Count > 0 )
-{
-    <div class="row">
-        <div class="col-6">
-            <ul>
-                @for ( int i = 0; i < m_order.LineItems.Count; i++ )
-                {
-                    // line items
-                    <LineItemComponent LineItem="m_order.LineItems[i]" OnDeleteProduct="HandleDeleteProduct" OnUpdateQuantity="HandleUpdateQuantity"></LineItemComponent>
-                    @if ( i < m_order.LineItems.Count - 1 )
+    @if ( m_order != null && m_order.LineItems != null && m_order.LineItems.Count > 0 )
+    {
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    @for ( int i = 0; i < m_order.LineItems.Count; i++ )
                     {
-                        <li style="list-style: none">
-                            <hr />
-                        </li>
+                        // line items
+                        <LineItemComponent LineItem="m_order.LineItems[i]" OnDeleteProduct="HandleDeleteProduct" OnUpdateQuantity="HandleUpdateQuantity"></LineItemComponent>
+                        @if ( i < m_order.LineItems.Count - 1 )
+                        {
+                            <li style="list-style: none">
+                                <hr />
+                            </li>
+                        }
                     }
-                }
-            </ul>
+                </ul>
+            </div>
+            <div class="col">
+                <OrderSummaryComponent Order="m_order"></OrderSummaryComponent>
+            </div>
         </div>
-        <div class="col">
-            <OrderSummaryComponent Order="m_order"></OrderSummaryComponent>
-        </div>
-    </div>
-}
+    }
+</div>
+
 
 
 @code {
