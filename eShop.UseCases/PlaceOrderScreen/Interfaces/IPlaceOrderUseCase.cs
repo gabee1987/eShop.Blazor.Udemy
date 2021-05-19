@@ -1,7 +1,7 @@
 ﻿using eShop.CoreBusiness.Models;
 using System.Threading.Tasks;
 
-namespace eShop.UseCases.ShoppingCartScreen
+namespace eShop.UseCases.PlaceOrderScreen
 {
     public interface IPlaceOrderUseCase
     {

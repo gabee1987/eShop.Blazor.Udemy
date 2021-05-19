@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShop.UseCases.ShoppingCartScreen
+namespace eShop.UseCases.PlaceOrderScreen
 {
     public class PlaceOrderUseCase : IPlaceOrderUseCase
     {

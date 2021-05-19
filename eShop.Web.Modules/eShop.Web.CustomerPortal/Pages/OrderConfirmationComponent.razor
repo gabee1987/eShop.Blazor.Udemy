@@ -1,0 +1,80 @@
+﻿@page "/orderconfirm/{uniqueid}"
+
+@inject IViewOrderConfirmationUseCase viewOrderConfirmationUseCase
+
+<div class="container">
+    <h3>Order Confirmation</h3>
+    <br />
+    @if ( order != null )
+    {
+        <p>
+            <b>Shipping Info</b>
+        </p>
+        <p>@order.CustomerName</p>
+        <p>@order.CustomerAddress</p>
+        <p>@order.CustomerCity</p>
+        <p>@order.CustomerStateProvince</p>
+        <p>@order.CustomerCountry</p>
+        <br />
+        <OrderSummaryComponent Order="order" HidePlaceOrder="true"></OrderSummaryComponent>
+        <br />
+
+        <div class="list-group">
+            @foreach ( var item in order.LineItems )
+            {
+            <a href="" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@item.Product.Name</h5>
+                    <small>@item.Product.Price</small>
+                    <small>@item.Quantity</small>
+                </div>
+                <small>@item.Product.Description</small>
+            </a>
+            }
+        </div>
+
+        @*accordion*@
+        @*@foreach ( var item in order.LineItems )
+        {
+            <div class="accordion" id="productsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="header-@item.ProductId">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@item.ProductId" aria-expanded="false" aria-controls="@item.ProductId">
+                            <h2>@item.Product.Name</h2>
+                        </button>
+                    </h2>
+                    <div id="collapse-@item.ProductId" class="accordion-collapse collapse show" aria-labelledby="header-@item.ProductId" data-bs-parent="#productsAccordion">
+                        <div class="accordion-body">
+                            <strong>@item.Product.Brand</strong><p>@item.Product.ProductId</p>
+                            <p>@item.Product.Description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }*@
+    }
+    else
+    {
+        <b>Something went wrong...</b>
+    }
+</div>
+
+
+@code {
+
+    private Order order;
+
+    [Parameter]
+    public string UniqueId { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if ( !string.IsNullOrWhiteSpace( UniqueId ) )
+        {
+            order = viewOrderConfirmationUseCase.Execute( UniqueId );
+        }
+    }
+
+}
