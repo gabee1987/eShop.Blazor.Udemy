@@ -276,8 +276,15 @@ app {
         z-index: 1;
     }
 
+    .card .card-img-link {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
     .card .card-body {
         z-index: 1;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     .card .card-footer {
@@ -304,6 +311,10 @@ app {
 }
 
 .card:hover .card-zoom-bg {
+    transform: scale(1.05);
+}
+
+.card:hover .card-img-link {
     transform: scale(1.05);
 }
 

@@ -19,8 +19,8 @@ namespace eShop.UseCases.AdminPortal.OrderDetailScreen
 
         public bool Execute( int orderId, string adminUserName )
         {
-            var order = m_orderRepository.GetOrder( orderId );
-            order.AdminUser = adminUserName;
+            var order           = m_orderRepository.GetOrder( orderId );
+            order.AdminUser     = adminUserName;
             order.DateProcessed = DateTime.Now;
 
             if ( m_orderService.ValidateProcessOrder( order ) )
